@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="net.sf.eclipsecs.ui.config.CheckConfigurationConfigureDialog">
+		<item value="163" key="colWidth3"/>
+		<item value="93" key="colWidth2"/>
+		<item value="false" key="minimized"/>
+		<item value="141" key="colWidth1"/>
+		<item value="71" key="colWidth0"/>
+		<item value="718" key="width"/>
+		<item value="-1" key="selectedRow"/>
+		<item value="false" key="maximized"/>
+		<item value="0" key="sortColumn"/>
+		<item value="675" key="height"/>
+		<item value="1" key="sortDirection"/>
+		<item value="44" key="y"/>
+		<item value="331" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#JavadocPackage">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#TypecastParenPad">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#JavadocMethod">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.core.config.GlobalCheckConfigurationWorkingSet">
+		<item value="-1" key="selectedRow"/>
+		<item value="42" key="colWidth3"/>
+		<item value="106" key="colWidth2"/>
+		<item value="0" key="sortColumn"/>
+		<item value="107" key="colWidth1"/>
+		<item value="143" key="colWidth0"/>
+		<item value="1" key="sortDirection"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#JavadocVariable">
+		<item value="false" key="maximized"/>
+		<item value="277" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="566" key="width"/>
+		<item value="153" key="y"/>
+		<item value="406" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#EmptyForInitializerPad">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.stats.views.MarkerStatsView">
+		<section name="masterView">
+		</section>
+		<section name="detailView">
+		</section>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#FileLength">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#JavadocStyle">
+		<item value="false" key="maximized"/>
+		<item value="540" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="546" key="width"/>
+		<item value="21" key="y"/>
+		<item value="417" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#LineLength">
+		<item value="false" key="maximized"/>
+		<item value="297" key="height"/>
+		<item value="false" key="minimized"/>
+		<item value="594" key="width"/>
+		<item value="183" key="y"/>
+		<item value="393" key="x"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#AbstractClassName">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#RegexpSingleline">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+	<section name="net.sf.eclipsecs.ui.config.RuleConfigurationEditDialog#FileTabCharacter">
+		<item value="false" key="maximized"/>
+		<item value="false" key="minimized"/>
+	</section>
+</section>

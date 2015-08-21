@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--  Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+ -->
+<!--
+This is the Integration Service (Webservice, Messaging, ...) Maven POM.
+
+
+Template version: 1.1-SNAPSHOT
+Generation time : 2008-08-26 12:02:58 CEST
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>se.vgregion.javg.refsystems.addressbook</groupId>
+    <artifactId>addressbook-address</artifactId>
+    <version>1.4</version>
+  </parent>
+  <groupId>se.vgregion.javg.refsystems.addressbook</groupId>
+  <artifactId>addressbook-address-module-intsvc</artifactId>
+  <packaging>war</packaging>
+  <name>${project.artifactId}</name>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <!-- Configure eclipse plug-in to generate a context root that does not have the version number on it -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <wtpContextName>${project.artifactId}</wtpContextName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>addressbook-address-composite-svc</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>addressbook-address-composite-schema</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.fw.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

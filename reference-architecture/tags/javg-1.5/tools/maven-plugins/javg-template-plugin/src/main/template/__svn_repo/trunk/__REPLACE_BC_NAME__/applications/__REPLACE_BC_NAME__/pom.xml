@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+This POM generates an EAR for the Business Component.
+
+
+Template version: __TEMPLATE_VERSION__
+Generation time : __GENERATION_TIME__
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>__REPLACE_GROUPID__</groupId>
+    <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <groupId>__REPLACE_GROUPID__</groupId>
+  <!--
+    Use full name qualification (with system name) here to ensure uniqueness
+    when deploying in container.
+  -->
+  <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-app</artifactId>
+  <packaging>ear</packaging>
+  <name>${project.artifactId}</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-module-web</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-module-portlet</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-module-intsvc</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+</project>

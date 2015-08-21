@@ -1,0 +1,41 @@
+<!--   Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+-->
+<div xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:wct="http://www.vgr.se/javg-util/webcomponent">
+
+	<ui:composition template="/template.xhtml">
+	<ui:define name="body">
+  <h3>AddressBook - Category</h3>
+
+  <form name="categoryForm" id="categoryForm" jsfc="h:form">
+    <table>
+        <tr>
+          <td><b>New category</b></td>
+          <td><input name="newCategory" id="newCategory" type="text" jsfc="h:inputText" value="#{newCategory.value}" /></td>
+        </tr>
+    </table>
+    
+	<input id="ok" value="Ok" type="submit" jsfc="h:commandButton" action="saveAction" /> &#160;&#160;
+	<input id="cancel" value="Cancel" type="submit" jsfc="h:commandButton" action="cancelAction" />
+  </form>
+	</ui:define>
+</ui:composition>
+</div>

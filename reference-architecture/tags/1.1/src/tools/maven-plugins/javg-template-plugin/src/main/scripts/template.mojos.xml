@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<pluginMetadata>
+  <mojos>
+    <mojo>
+      <goal>bc</goal>
+      <call>public_create_business_component_structure</call>
+    </mojo>
+
+    <mojo>
+      <goal>svn</goal>
+      <call>public_create_subversion_structure</call>
+    </mojo>
+  </mojos>
+</pluginMetadata>

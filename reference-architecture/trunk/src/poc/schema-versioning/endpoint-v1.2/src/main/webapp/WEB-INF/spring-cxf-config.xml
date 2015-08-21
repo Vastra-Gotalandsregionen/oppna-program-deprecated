@@ -1,0 +1,47 @@
+<!--  Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:cxf="http://cxf.apache.org/core"
+    xmlns:jaxws="http://cxf.apache.org/jaxws"
+    xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath*:META-INF/cxf/cxf.xml"/>
+	<import resource="classpath*:META-INF/cxf/cxf-extension-soap.xml"/>
+	<import resource="classpath*:META-INF/cxf/cxf-servlet.xml"/>
+
+  <cxf:bus>
+    <cxf:features>
+      <cxf:logging/>
+    </cxf:features>
+  </cxf:bus> 
+
+	<jaxws:endpoint
+	    id="ContactService"
+		  implementor="se.vgr.javg.poc.versioning.endpoint.ContactServiceImpl"
+		  address="/ContactService">
+	  <!-- CXF specific schema validation -->
+    <jaxws:properties>
+      <entry key="schema-validation-enabled" value="true" />
+    </jaxws:properties>
+  </jaxws:endpoint>
+</beans>

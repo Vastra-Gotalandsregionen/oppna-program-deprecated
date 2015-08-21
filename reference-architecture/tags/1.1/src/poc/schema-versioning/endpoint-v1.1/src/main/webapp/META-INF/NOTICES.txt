@@ -1,0 +1,149 @@
+Copyright © 2009 VŠstra Gštalandsregionen
+
+This product includes/uses software, Apache Ant
+(http://ant.apache.org/)
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache Maven
+(http://maven.apache.org/)
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, JUnit
+(http://sourceforge.net/projects/junit/)
+License: Common Public License - v 1.0
+(http://www.opensource.org/licenses/cpl1.0.txt)
+
+This product includes/uses software, Apache Log4j
+(http://logging.apache.org/log4j),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache commons-logging
+(http://commons.apache.org/logging/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache CXF
+(http://cxf.apache.org/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Jakarta Standard Taglibs
+(http://jakarta.apache.org/taglibs/index.html),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Spring Webflow
+(http://www.springsource.org/webflow),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Spring
+(http://www.springsource.org/about),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, JavaServer Faces (JSF)
+(https://javaserverfaces.dev.java.net/),
+License: Common Development and Distribution License (CDDL) Version 1.0
+(https://glassfish.dev.java.net/public/CDDL+GPL.html)
+
+This product includes/uses software, Unified Expression Language (EL)
+(https://uel.dev.java.net/),
+License: Common Development and Distribution License (CDDL) Version 1.0
+(https://glassfish.dev.java.net/public/CDDL+GPL.html)
+
+This product includes/uses software, Facelets 
+(https://facelets.dev.java.net/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, JavaBeans Activation Framework
+(http://java.sun.com/javase/technologies/desktop/javabeans/jaf/reference/api/index.html),
+License: thirdpartylicenses/activation.license.txt
+
+This product includes/uses software, AOP Alliance 
+(http://aopalliance.sourceforge.net/),
+License: Public Domain
+
+This product includes/uses software, ASM
+(http://asm.ow2.org/),
+License: BSD License
+(http://www.opensource.org/licenses/bsd-license.php)
+
+This product includes/uses software, Apache commons-lang
+(http://commons.apache.org/lang/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Fast Infoset
+(https://fi.dev.java.net/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Geronimo
+(http://geronimo.apache.org/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Jaxb
+(https://jaxb.dev.java.net/),
+License: Common Development and Distribution License (CDDL) Version 1.0
+(https://glassfish.dev.java.net/public/CDDL+GPL.html)
+
+This product includes/uses software, Apache Neethi
+(http://ws.apache.org/commons/neethi/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, OGNL
+(http://www.ognl.org/),
+License: BSD License
+(http://www.opensource.org/licenses/bsd-license.php)
+
+This product includes/uses software, SAAJ
+(https://saaj.dev.java.net/),
+License: Common Development and Distribution License (CDDL) Version 1.0
+(https://glassfish.dev.java.net/public/CDDL+GPL.html)
+
+This product includes/uses software, Apache Velocity
+(http://velocity.apache.org/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Wsdl4j
+(http://sf.net/projects/wsdl4j),
+License: Common Public License  Version 1.0
+(http://www.opensource.org/licenses/cpl1.0.txt)
+
+This product includes/uses software, Woodstox (wstx-asl)
+(http://woodstox.codehaus.org),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache XML Commons Resolver Component
+(http://xml.apache.org/commons/components/resolver/),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache XMLSchema
+(http://ws.apache.org/commons/XmlSchema),
+License: The Apache Software License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

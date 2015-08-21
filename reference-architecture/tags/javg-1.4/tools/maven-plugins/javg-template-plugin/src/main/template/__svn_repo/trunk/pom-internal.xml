@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+  <!--
+    This is the System-level Maven POM. Usage: Define all truly common things for the system here. For example:
+    versions of third-party dependencies used throughout the system. Template version: __TEMPLATE_VERSION__
+    Generation time : __GENERATION_TIME__
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>se.vgregion.common</groupId>
+    <artifactId>profile-internal</artifactId>
+    <version>2.4</version>
+  </parent>
+
+  <groupId>__REPLACE_GROUPID__</groupId>
+  <artifactId>__REPLACE_SYSTEM_NAME__-system</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>${project.artifactId}</name>
+
+  <modules>
+    <module>__REPLACE_BC_NAME__</module>
+  </modules>
+
+  <!--NB! SCM config below assumes system name equals VGR subversion/googlecode project name! -->
+  <!-- Open Source repo -->
+  <scm>
+    <developerConnection>scm:svn:svn://vgr-utv-win01.vgregion.se/vgr/__REPLACE_SYSTEM_NAME__/trunk</developerConnection>
+    <url>svn://vgr-utv-win01.vgregion.se/</url>
+  </scm>
+
+</project>

@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+
+  <description>CHANGE ME!</description>
+
+  <!-- resolving .xhmtl files for Facelets -->
+  <context-param>
+    <param-name>facelets.RESOURCE_RESOLVER</param-name>
+    <param-value>
+      se.vgr.javg.util.webcomponent.support.FaceletsClasspathResourceResolver
+    </param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+      classpath*:/services-config.xml /WEB-INF/webflow-config.xml
+    </param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>facelets.REFRESH_PERIOD</param-name>
+    <param-value>2</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>facelets.DEVELOPMENT</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+    <!-- client side state does NOT work with Webflow 1.0.5 (nor with Myfaces/SunRI)
+      <param-value>client</param-value>
+    -->
+    <param-value>server</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+    <param-value>.xhtml</param-value>
+  </context-param>
+
+  <!-- Sun RI: strict validation at startup
+  <context-param>
+    <param-name>com.sun.faces.validateXml</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>com.sun.faces.verifyObjects</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  -->
+
+  <!-- Myfaces: not used with Sun's JSF RI
+  <context-param>
+    <param-name>org.apache.myfaces.ALLOW_JAVASCRIPT</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>org.apache.myfaces.DETECT_JAVASCRIPT</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>org.apache.myfaces.PRETTY_HTML</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>org.apache.myfaces.AUTO_SCROLL</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  -->
+
+  <!-- Guarantees that under all JSF exit conditions, the flow context will be cleaned up -->
+  <filter>
+    <filter-name>Flow System Cleanup Filter</filter-name>
+    <filter-class>
+      org.springframework.webflow.executor.jsf.FlowSystemCleanupFilter
+    </filter-class>
+  </filter>
+
+  <!-- Filters all request to *.faces to the Flow System Cleanup Filter for guarenteed cleanup -->
+  <filter-mapping>
+    <filter-name>Flow System Cleanup Filter</filter-name>
+    <url-pattern>*.jsf</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>
+      org.springframework.web.filter.CharacterEncodingFilter
+    </filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </filter>
+
+  <!-- MyFaces listener that starts up the JSF engine by reading faces-config.xml -->
+  <!-- Myfaces, not used with Sun's JSF RI
+  <listener>
+    <listener-class>
+      org.apache.myfaces.webapp.StartupServletContextListener
+    </listener-class>
+  </listener>
+  -->
+
+  <!-- Bootstraps the root Spring Web Application Context, responsible for deploying managed beans
+    defined in the configuration files above.  These beans represent the services used by the JSF application. -->
+
+  <listener>
+    <listener-class>
+      org.springframework.web.context.ContextLoaderListener
+    </listener-class>
+  </listener>
+
+  <!--
+    Replaced by the Spring-resource-servlet below.
+    The Spring servlet is more secure since it only allows access to typical
+    webresources - not all resources.
+  <servlet>
+    <servlet-name>JAVG Classpath Servlet</servlet-name>
+    <servlet-class>
+      se.vgr.javg.util.webcomponent.support.ClasspathResourceLoadingServlet
+    </servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JAVG Classpath Servlet</servlet-name>
+    <url-pattern>/resources/*</url-pattern>
+  </servlet-mapping>
+  -->
+
+  <!--
+    Map all url:s beginning with "resources" to /resources/* for loading from
+    web composite jars on the classpath rather than the web-inf directory.
+    Typical examples are images, javascript and css-files.
+
+    See: http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch11s02.html
+  -->
+  <servlet>
+    <servlet-name>Resource Servlet</servlet-name>
+    <servlet-class>org.springframework.js.resource.ResourceServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Resource Servlet</servlet-name>
+    <url-pattern>/resources/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!-- Map all requests to *.jsf to the Faces Servlet for handling -->
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+
+  <!-- JAVG support for using GET-links with JSF/Webflow -->
+  <servlet>
+    <servlet-name>JSFWebFlowGetRequestDispatcher</servlet-name>
+    <servlet-class>se.vgr.javg.support.webflow.v1.JSFWebFlowGetRequestDispatcher</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JSFWebFlowGetRequestDispatcher</servlet-name>
+    <url-pattern>/getlink</url-pattern>
+  </servlet-mapping>
+
+  <error-page>
+    <exception-type>javax.servlet.ServletException</exception-type>
+    <location>/error.jsf</location>
+  </error-page>
+  <error-page>
+    <exception-type>
+      org.springframework.webflow.execution.repository.support.InvalidContinuationIdException
+    </exception-type>
+    <location>/error.jsf</location>
+  </error-page>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

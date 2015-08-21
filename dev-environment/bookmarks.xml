@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+   <site url="http://eclipse-cs.sf.net/update" selected="true" name="Checkstyle"/>
+   <site url="http://update.eclemma.org" selected="true" name="ECLEmma"/>
+   <site url="http://download.eclipse.org/technology/epp/packages/galileo" selected="true" name="EPP Packages Repository"/>
+   <site url="http://findbugs.cs.umd.edu/eclipse" selected="true" name="Findbugs"/>
+   <site url="http://download.eclipse.org/releases/galileo" selected="true" name="Galileo"/>
+   <site url="http://hudson-eclipse.googlecode.com/svn/trunk/hudson-update/" selected="true" name="Hudson"/>
+   <site url="http://download.eclipse.org/tools/mylyn/update/e3.4/" selected="true" name="Mylyn for Eclipse 3.4 and 3.5"/>
+   <site url="http://download.eclipse.org/tools/mylyn/update/incubator" selected="true" name="Mylyn Incubator"/>
+   <site url="http://springide.org/updatesite" selected="true" name="Spring IDE"/>
+   <site url="http://subclipse.tigris.org/update_1.6.x" selected="true" name="Subclipse"/>
+   <site url="http://download.eclipse.org/eclipse/updates/3.5" selected="true" name="The Eclipse Project Updates"/>
+   <site url="http://download.eclipse.org/webtools/updates" selected="true" name="The Eclipse Web Tools Platform (WTP) Project update site"/>
+   <site url="http://download.eclipse.org/birt/update-site/2.5" selected="false" name=""/>
+   <site url="http://download.eclipse.org/datatools/updates" selected="false" name=""/>
+   <site url="http://download.eclipse.org/dsdp/mtj/updates/1.0/stable/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/dsdp/tm/updates/3.0" selected="false" name=""/>
+   <site url="http://download.eclipse.org/dsdp/tml/updates/0.3/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/galileo/releases/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/emf/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/emft/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/gmf/updates/releases/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/m2m/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/m2t/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/m2t/updates/releases/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/mdt/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/modeling/tmf/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/rt/eclipselink/incremental-updates/milestone" selected="false" name=""/>
+   <site url="http://download.eclipse.org/rt/eclipselink/updates" selected="false" name=""/>
+   <site url="http://download.eclipse.org/rt/rap/1.2/runtime-update" selected="false" name=""/>
+   <site url="http://download.eclipse.org/rt/rap/1.2/update" selected="false" name=""/>
+   <site url="http://download.eclipse.org/rt/riena/1.1.0.0/update/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/rt/swordfish/updates" selected="false" name=""/>
+   <site url="http://download.eclipse.org/stp/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/actf/0.7/update-site/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/dltk/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/emft/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/epp/updates/1.1/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/jwt/update-site" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/mat/0.8/update-site/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/technology/subversive/0.7/update-site/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/tools/cdt/releases/galileo" selected="false" name=""/>
+   <site url="http://download.eclipse.org/tools/mylyn/update/extras" selected="false" name=""/>
+   <site url="http://download.eclipse.org/tools/pdt/updates/" selected="false" name=""/>
+   <site url="http://download.eclipse.org/tools/pdt/updates/2.0/" selected="false" name=""/>
+   <site url="http://eclipse-cs.sourceforge.net/update" selected="false" name=""/>
+   <site url="http://eclipse.org/tptp/updates/" selected="false" name=""/>
+   <site url="http://eclipse.svnkit.com/1.3.x/" selected="false" name=""/>
+   <site url="http://www.eclipse.org/modeling/emft/?project=search#search" selected="false" name=""/>
+   <site url="http://www.eclipse.org/modeling/emft/updates/" selected="false" name=""/>
+</bookmarks>

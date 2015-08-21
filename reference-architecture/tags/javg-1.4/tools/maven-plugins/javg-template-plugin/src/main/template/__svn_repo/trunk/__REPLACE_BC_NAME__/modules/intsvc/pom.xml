@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+This is the Integration Service (Webservice, Messaging, ...) Maven POM.
+
+
+Template version: __TEMPLATE_VERSION__
+Generation time : __GENERATION_TIME__
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>__REPLACE_GROUPID__</groupId>
+    <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>__REPLACE_GROUPID__</groupId>
+  <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-module-intsvc</artifactId>
+  <packaging>war</packaging>
+  <name>${project.artifactId}</name>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <!-- Configure eclipse plug-in to generate a context root that does not have the version number on it -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <wtpContextName>${project.artifactId}</wtpContextName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-svc</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-schema</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+    </dependency>
+    
+  </dependencies>
+
+</project>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+-->
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+    start-state="getNewOrExistingAddressEntity">
+
+	<input name="entryId" value="flowScope.entryId"/>
+
+	<action-state id="getNewOrExistingAddressEntity">
+		<evaluate expression="Address_AddressFlowSupport.getNewOrExistingAddressEntry(entryId)" result="flowScope.AddressEntry" />
+		<transition on="success" to="editAddressEntry" />
+	</action-state>
+
+	<view-state id="editAddressEntry"
+		view="/Address_addressEntry.xhtml">
+		
+		<on-entry>
+			<evaluate expression="Address_AddressFlowSupport.getCategories()" result="flowScope.categories" />
+		</on-entry>
+		<transition on="saveAction" to="save" />
+		<transition on="newCategoryAction" to="enterNewCategory" />
+		<transition on="cancelAction" to="finish" />
+	</view-state>
+
+	<action-state id="save">
+		<evaluate expression="Address_AddressFlowSupport.saveEntry(AddressEntry)" />
+		<transition on="success" to="finish" />
+	</action-state>
+
+	<subflow-state id="enterNewCategory"
+		subflow="Address.category-flow">
+		<output name="newCategory" />
+		<transition on="finish" to="assignNewCategory" />
+		<transition on="cancel" to="editAddressEntry" />
+	</subflow-state>
+
+	<action-state id="assignNewCategory">
+		<set name="flowScope.AddressEntry.category"
+			value="flowScope.newCategory.value" />
+
+		<transition to="editAddressEntry" />
+	</action-state>
+
+	<end-state id="finish" />
+</flow>

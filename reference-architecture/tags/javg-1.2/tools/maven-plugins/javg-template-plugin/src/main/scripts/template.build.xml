@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!--==================================================================
+    Ant-script for Maven-plugin.
+
+    Sets up a Business Component Architecture (BCA) directory with
+    Maven POM-files from a template.
+
+    Refer to the Reference Architecture documentation for more information
+    on business components.
+    ===============================================================-->
+<project>
+
+    <!-- Note: workaround for "static" init of props that work bad in
+               Maven 2.0.4. -->
+    <target name="private_init_props">
+        <property name="tmp.dir" value="${basedir}/__javg_template__"/>
+        <property name="template.dir" value="${tmp.dir}/template"/>
+        <tstamp><format property="generation.time" pattern="yyyy-MM-dd HH:mm:ss z"/></tstamp>
+
+        <!-- load property file which contains build time info for *this* plugin -->
+        <property resource="buildtime.properties"/>
+
+        <property name="local.repo.dir" location="${user.home}/.m2/repository"/>
+<!--<echo message="DEBUG: ${local.repo.dir}"/>-->
+        <property name="artifact.self.path" location="${local.repo.dir}/${artifact.self.repo.subpath}"/>
+<!--<echo message="DEBUG: ${artifact.self.path}"/>-->
+        <property name="base.package.name.default" value="se.vgregion"/>
+    </target>
+
+
+    <target name="private_unzip_template_artifact" depends="private_init_props">
+        <delete dir="${tmp.dir}"/>
+        <mkdir dir="${tmp.dir}"/>
+        <unzip src="${artifact.self.path}" dest="${tmp.dir}"/>
+    </target>
+
+
+    <target name="private_initialize_structure">
+        <!-- get user input -->
+        <echo message="==========================================================="/>
+        <echo message="Please provide input parameters."/>
+        <echo/>
+        <echo message="Hint: the Maven &quot;groupId&quot; for all generated"/>
+        <echo message="      artifacts will be: [base-package-name].[system-name]"/>
+        <echo/>
+        <echo/>
+        <input message="Please enter base package name for system [${base.package.name.default}]:"
+            addproperty="base.package.name" defaultvalue="${base.package.name.default}"/>
+        <echo/>
+        <input message="Please enter system name:" addproperty="system.name"/>
+        <echo/>
+        <input message="Please enter business component name:" addproperty="business.component.name"/>
+        <echo/>
+        <echo message="==========================================================="/>
+
+        <!-- rename dir's -->
+        <move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/applications/__REPLACE_BC_NAME__"
+                tofile="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/applications/${business.component.name}"/>
+
+        <move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__"
+                tofile="${template.dir}/__svn_repo/trunk/${business.component.name}"/>
+
+        <move file="${template.dir}/__svn_repo"
+                tofile="${template.dir}/${system.name}"/>
+
+        <!-- replace values in Maven POM-files -->
+        <replace dir="${template.dir}" includes="**/*">
+            <replacefilter token="__REPLACE_GROUPID__" value="${base.package.name}.${system.name}"/>
+            <replacefilter token="__REPLACE_SYSTEM_NAME__" value="${system.name}"/>
+            <replacefilter token="__REPLACE_BC_NAME__" value="${business.component.name}"/>
+            <replacefilter token="__GENERATION_TIME__" value="${generation.time}"/>
+            <replacefilter token="__TEMPLATE_VERSION__" value="${template.version}"/>
+        </replace>
+    </target>
+
+
+    <target name="public_create_business_component_structure"
+            depends="private_unzip_template_artifact,
+                     private_initialize_structure,
+                     private_insert_module_reference_in_parent">
+        <delete file="${template.dir}/${system.name}/trunk/pom.xml"/>
+        <move file="${template.dir}/${system.name}/trunk"
+                tofile="${basedir}"/>
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+
+    <target name="public_create_subversion_structure"
+            depends="private_unzip_template_artifact,
+                     private_initialize_structure">
+        <move file="${template.dir}"
+                tofile="${basedir}"/>
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+
+    <!--
+      This is only to add the newly created Business Component to a parent
+      POM (the system level) in the <modules> section.
+    -->
+    <target name="private_insert_module_reference_in_parent">
+        <condition property="isOnWindows">
+            <os family="windows"/>
+        </condition>
+        <property name="generate_archetype_cmd" value="mvn archetype:generate -Darchetype.interactive=false -DarchetypeGroupId=se.vgr.javg.maven.archetypes -DarchetypeArtifactId=javg-minimal-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=DUMMY -DartifactId=${business.component.name} -Dversion=1.0-SNAPSHOT -Dpackage=NONE"/>
+        <antcall target="private_generate_dummy_archetype_windows"/>
+        <antcall target="private_generate_dummy_archetype_notwindows"/>
+    </target>
+    <target name="private_generate_dummy_archetype_windows" if="isOnWindows">
+        <echo file="generate_dummy_archetype.bat">
+${generate_archetype_cmd}
+        </echo>
+        <exec executable="cmd"
+                dir="${basedir}"
+                failonerror="true">
+            <arg value="/c"/>
+            <arg value="generate_dummy_archetype.bat"/>
+        </exec>
+        <delete file="generate_dummy_archetype.bat"/>
+    </target>
+    <target name="private_generate_dummy_archetype_notwindows" unless="isOnWindows">
+        <echo file="generate_dummy_archetype.sh">
+#!/bin/sh
+${generate_archetype_cmd}
+        </echo>
+        <exec executable="generate_dummy_archetype.sh" dir="${basedir}" failonerror="true"/>
+        <delete file="generate_dummy_archetype.sh"/>
+    </target>
+
+</project>

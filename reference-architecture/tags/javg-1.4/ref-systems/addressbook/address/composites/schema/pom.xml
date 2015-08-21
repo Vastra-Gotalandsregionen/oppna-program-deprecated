@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--  Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+ -->
+<!--
+This is the Schema-composite that produces a jar of JAX-WS interfaces (SEI) -
+and JAXB2 binding classes for the contained schemas.
+
+
+Template version: 1.1-SNAPSHOT
+Generation time : 2008-08-26 12:02:58 CEST
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>se.vgregion.javg.refsystems.addressbook</groupId>
+    <artifactId>addressbook-address</artifactId>
+    <version>1.4</version>
+  </parent>
+  <groupId>se.vgregion.javg.refsystems.addressbook</groupId>
+  <artifactId>addressbook-address-composite-schema</artifactId>
+  <packaging>jar</packaging>
+  <name>${project.artifactId}</name>
+
+<!-- UNCOMMENT AND CHANGE THIS TO USE JAX-WS WSDL CODE GENERATION -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <version>${apache.cxf.version}</version>
+        <executions>
+          <execution>
+            <id>generate-sources</id>
+            <phase>generate-sources</phase>
+            <configuration>
+              <sourceRoot>${basedir}/target/generated/wsdl</sourceRoot>
+              <wsdlOptions>
+                <wsdlOption>
+                  <!--
+                    extraargs:
+                    Only needed for special customization of package names.
+                    Proper namespaces in WSDL and XML-schemas (as in the examples)
+                    should make such customizations unnecessary.
+                  -->
+                  <!--
+                  <extraargs>
+                    <extraarg>-p</extraarg>
+                    <extraarg>
+                      urn:AddressServices.wsdl.core.vgr.se:v1=se.vgregion.core.wsdl.addressservices
+                    </extraarg>
+                    <extraarg>-p</extraarg>
+                    <extraarg>
+                      urn:AddressEntry.schema.core.vgr.se:v1=se.vgregion.core.schema.addressentry
+                    </extraarg>
+                    <extraarg>-p</extraarg>
+                    <extraarg>
+                      urn:Category.schema.core.vgr.se:v1=se.vgregion.core.schema.category
+                    </extraarg>
+                  </extraargs>
+                  -->
+                  <wsdl>${basedir}/src/main/wsdl/AddressServices_1.0.wsdl</wsdl>
+                </wsdlOption>
+              </wsdlOptions>
+            </configuration>
+            <goals>
+              <goal>wsdl2java</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>addressbook-address-composite-types</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxws</artifactId>
+      <version>${apache.cxf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-transports-http</artifactId>
+      <version>${apache.cxf.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>

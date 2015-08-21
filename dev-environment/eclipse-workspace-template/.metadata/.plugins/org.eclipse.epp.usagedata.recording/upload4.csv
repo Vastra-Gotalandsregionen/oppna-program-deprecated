@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.springframework.ide.eclipse.beans.core,2.2.6.200908051215-RELEASE,"org.springframework.ide.eclipse.beans.core",1252559091640
+started,bundle,org.springframework.ide.eclipse.beans.ui,2.2.6.200908051215-RELEASE,"org.springframework.ide.eclipse.beans.ui",1252559091687
+started,bundle,org.springframework.ide.eclipse.core,2.2.6.200908051215-RELEASE,"org.springframework.ide.eclipse.core",1252559091781
+started,bundle,org.springframework.ide.eclipse.ui,2.2.6.200908051215-RELEASE,"org.springframework.ide.eclipse.ui",1252559091859
+os,sysinfo,,,"win32",1252559091859
+arch,sysinfo,,,"x86",1252559091859
+ws,sysinfo,,,"win32",1252559091859
+locale,sysinfo,,,"sv_SE",1252559091859
+processors,sysinfo,,,"2",1252559091859
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1252559091859
+java.runtime.version,sysinfo,,,"1.6.0_15-b03",1252559091859
+java.specification.name,sysinfo,,,"Java Platform API Specification",1252559091859
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1252559091859
+java.specification.version,sysinfo,,,"1.6",1252559091859
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1252559091859
+java.version,sysinfo,,,"1.6.0_15",1252559091859
+java.vm.info,sysinfo,,,"mixed mode",1252559091859
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1252559091859
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1252559091859
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1252559091859
+java.vm.specification.version,sysinfo,,,"1.0",1252559091859
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1252559091859
+java.vm.version,sysinfo,,,"14.1-b02",1252559091859
+started,bundle,org.tigris.subversion.clientadapter,1.6.4.1,"org.tigris.subversion.clientadapter",1252559093250
+started,bundle,org.eclipse.mylyn.commons.ui,3.2.1.v20090722-0200-e3x,"org.eclipse.mylyn.commons.ui",1252559093359

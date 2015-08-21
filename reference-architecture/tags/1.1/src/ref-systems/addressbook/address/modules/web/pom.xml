@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!--  Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+ -->
+<!--
+This is the Web-app Maven POM.
+
+
+Template version: 1.1-SNAPSHOT
+Generation time : 2008-08-26 12:02:58 CEST
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>se.vgr.javg.refsystems.addressbook</groupId>
+    <artifactId>addressbook-address</artifactId>
+    <version>1.1</version>
+  </parent>
+  <artifactId>addressbook-address-module-web</artifactId>
+  <packaging>war</packaging>
+  <name>${project.artifactId}</name>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <plugin>
+        <!-- Configure eclipse plug-in to generate a context root that does not have the version number on it -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <wtpContextName>${project.artifactId}</wtpContextName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <repositories>
+    <!-- Repository for JSF 1.2 -->
+  	<repository>
+  		<id>java.net.1</id>
+  		<name>Java.net Repository Maven 1 Legacy</name>
+  		<url>http://download.java.net/maven/1</url>
+  		<layout>legacy</layout>
+  	</repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>addressbook-address-composite-webcomp</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>se.vgr.javg</groupId>
+      <artifactId>javg-rt-support</artifactId>
+      <version>${javg.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+    <dependency>
+      <!-- TODO: upgrade to Spring WebFlow 2.x -->
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webflow</artifactId>
+      <version>1.0.5</version>
+      <!-- Exclude the version of Spring Framework that Webflow 1.0.5 wants -->
+      <exclusions>
+      	<exclusion>
+      		<groupId>org.springframework</groupId>
+      		<artifactId>spring-core</artifactId>
+      	</exclusion>
+      	<exclusion>
+      		<groupId>org.springframework</groupId>
+      		<artifactId>spring-beans</artifactId>
+      	</exclusion>
+      	<exclusion>
+      		<groupId>org.springframework</groupId>
+      		<artifactId>spring-context</artifactId>
+      	</exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <!-- Use the resource-loading servlet from Spring-JS -->
+      <groupId>org.springframework.webflow</groupId>
+      <artifactId>org.springframework.js</artifactId>
+      <version>2.0.3.RELEASE</version>
+    </dependency>
+    <dependency>
+      <!-- required by the Spring-JS resource-loading servlet -->
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.fw.version}</version>
+    </dependency>
+    <!--
+      We use a Servlet Filter from spring-web to control UTF-8 encodings.
+      Facelets doesn't do this for us.
+    -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.fw.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.faces</groupId>
+      <artifactId>jsf-api</artifactId>
+      <version>1.2_13</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.faces</groupId>
+      <artifactId>jsf-impl</artifactId>
+      <version>1.2_13</version>
+      <scope>compile</scope>
+    </dependency>
+    <!--
+      We use a Servlet Filter from spring-web to control UTF-8 encodings.
+      Facelets doesn't do this for us.
+    -->
+    <!--
+      DO NOT USE JSF 1.1.x - spec did not clearly specify which UI-components
+      were allowed to generate JavaScript. In 1.2 only commandLink (out of the
+      standard components) is allowed to generated JavaScript. Suns RI for 1.1
+      already did this (but had problems with Facelets).
+      MyFaces 1.1.x (<=1.1.6) generates loads of JavaScript for form submission.
+      MyFaces 1.2.x seems to rely on Servlet 2.5 while Suns 1.2 RI can run
+      with Servlet 2.4, see:
+        http://raibledesigns.com/rd/entry/thoughts_on_myfaces_1_2
+    -->
+    <!--
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-api</artifactId>
+      <version>1.1.5</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-impl</artifactId>
+      <version>1.1.5</version>
+      <scope>compile</scope>
+    </dependency>
+    -->
+
+    <!--
+      EL-jars (from java.net).
+      Needed for Facelets 1.1.12 with JSF 1.1 (using MyFaces 1.1.5
+      as JSF-implementation).
+    -->
+    <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>el-api</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>el-impl</groupId>
+      <artifactId>el-impl</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.facelets</groupId>
+      <artifactId>jsf-facelets</artifactId>
+      <version>1.1.14</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

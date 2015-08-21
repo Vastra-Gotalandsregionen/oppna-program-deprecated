@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+This is the Web-composite Maven POM.
+
+
+Template version: __TEMPLATE_VERSION__
+Generation time : __GENERATION_TIME__
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>__REPLACE_GROUPID__</groupId>
+    <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-webcomp</artifactId>
+  <packaging>jar</packaging>
+  <name>${project.artifactId}</name>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-svc</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-types</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-api</artifactId>
+      <version>1.1.5</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+</project>

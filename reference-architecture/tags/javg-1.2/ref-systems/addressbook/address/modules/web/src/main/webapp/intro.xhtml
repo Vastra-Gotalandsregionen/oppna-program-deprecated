@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   Copyright 2009 Västa Götalandsregionen
+
+  This library is free software; you can redistribute it and/or modify
+  it under the terms of version 2.1 of the GNU Lesser General Public
+  License as published by the Free Software Foundation.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307  USA
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:f="http://java.sun.com/jsf/core">
+<body>
+<f:view>
+	<div align="left">Referensapplikation JAVG</div>
+	<hr />
+	<div align="left">
+	<p><a href="Address.addresslist-flow.flow">Starta applikation (med länk)</a></p>
+	<p><h:form>
+		<h:commandLink value="Starta applikation (med formulär, JSF använder JavaScript)" action="start" />
+	</h:form></p>
+	
+	<p>Detta är en exempel-applikation som är byggd enligt principerna
+	för referensarkitekturen, med följande teknologier:</p>
+	<ul>
+		<li>Web-ramverk: JSF (basen för hanteringen av web-requests),
+		Facelets (vy-teknik)</li>
+		<li>Flödeskoordinering: Spring Web-flow (kontroll-lager pä
+		flödesnivå)</li>
+		<li>Integrationsramverk för Lös koppling mellan komponenter:
+		Spring Core (s.k. beroende-injicering)</li>
+		<li>Transaktionshantering: Spring Transaction, Spring AOP</li>
+		<li>Web-services: JAX-WS med Apache CXF</li>
+		<li>JAR-laddning av web-resurser: JAVG Support</li>
+	</ul>
+	</div>
+	<hr />
+</f:view>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<checkstyle-configurations file-format-version="5.0.0" default-check-configuration="sun_checks_vgr">
+  <check-configuration name="sun_checks_vgr" location="http://oppna-program.googlecode.com/svn/dev-environment/checkstyle/sun_checks_vgr.xml" type="remote" description="">
+    <additional-data name="cache-file" value="false"/>
+  </check-configuration>
+</checkstyle-configurations>
