@@ -53,6 +53,12 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
+.page-header h1 img {
+  height: 36px;
+  border-right: solid thin;
+  padding-right: 20px;
+}
+
 .page-header {
   color: #fff;
   text-align: center;
@@ -88,7 +94,6 @@ a {
     font-size: 1.75rem; } }
 
 .project-tagline {
-  margin-bottom: 2rem;
   font-weight: normal;
   opacity: 0.7; }
 
