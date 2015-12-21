@@ -2,61 +2,61 @@
 
 
 
-#DEPRECATED: Riktlinjer fšr mobila webbplatser
+#DEPRECATED: Riktlinjer för mobila webbplatser
 
 ##Sammanfattning
-_Riktlinjer fšr utveckling av webblšsningar som Šr anpassade fšr anvŠndning pŒ mobiltelefoner och andra enheter med liten skŠrm eller pekskŠrm._
+_Riktlinjer för utveckling av webblösningar som är anpassade för användning på mobiltelefoner och andra enheter med liten skärm eller pekskärm._
 
-_Dokumentets mŒlgrupp bestŒr i fšrsta hand av utvecklare med grŠnssnittsinriktning som behšver rŒd och riktlinjer vid utveckling av webbaserade lšsningar fšr mobila enheter._
+_Dokumentets målgrupp består i första hand av utvecklare med gränssnittsinriktning som behöver råd och riktlinjer vid utveckling av webbaserade lösningar för mobila enheter._
 
 ##Inledning
-I stort gŠller samma riktlinjer som vid grŠnssnittsutveckling fšr desktopdatorer, det vill sŠga fšlj webbstandarder, bygg tillgŠngligt och separera struktur, presentation och beteende med hjŠlp av progressive enhancement.
+I stort gäller samma riktlinjer som vid gränssnittsutveckling för desktopdatorer, det vill säga följ webbstandarder, bygg tillgängligt och separera struktur, presentation och beteende med hjälp av progressive enhancement.
 
-Utšver detta finns nŒgra saker man behšver tŠnka pŒ fšr att fŒ grŠnssnitt som fungerar bra nŠr anvŠndaren har en liten skŠrm och/eller interagerar via pekskŠrm i stŠllet fšr mus eller tangentbord.
+Utöver detta finns några saker man behöver tänka på för att få gränssnitt som fungerar bra när användaren har en liten skärm och/eller interagerar via pekskärm i stället för mus eller tangentbord.
 
-##SkŠrmstorlek
-NŠr det gŠller skŠrmstorlek fšr den typ av mobila enheter som ingŒr i dagens mŒlgrupp varierar den frŒn 320 x 480 pixlar upp till 1024 x 768 pixlar beroende pŒ enhet och rotation.
+##Skärmstorlek
+När det gäller skärmstorlek för den typ av mobila enheter som ingår i dagens målgrupp varierar den från 320 x 480 pixlar upp till 1024 x 768 pixlar beroende på enhet och rotation.
 
-Det som Šr gemensamt Šr att anvŠndaren inte kan Šndra fšnsterstorleken pŒ sin webblŠsare, utan den tar upp hela skŠrmytan.
+Det som är gemensamt är att användaren inte kan ändra fönsterstorleken på sin webbläsare, utan den tar upp hela skärmytan.
 
-Fšr att sŒ lŒngt det gŒr undvika att webblŠsaren sjŠlv anpassar innehŒllet till den tillgŠngliga ytan genom att zooma ut kan man vŠlja tvŒ vŠgar: flexibel bredd eller Media Queries.
+För att så långt det går undvika att webbläsaren själv anpassar innehållet till den tillgängliga ytan genom att zooma ut kan man välja två vägar: flexibel bredd eller Media Queries.
 
 ###Flexibel bredd
-Genom att undvika att sŠtta fasta bredder fŒr man en layout som sjŠlv anpassar sig efter den tillgŠngliga ytan. Fšrdelen Šr att den fungerar šverallt. Nackdelen Šr att man kan fŒ en vŠldigt ihoptryckt layout pŒ smala displayer och vŠldigt lŒnga textrader pŒ breda displayer.
+Genom att undvika att sätta fasta bredder får man en layout som själv anpassar sig efter den tillgängliga ytan. Fördelen är att den fungerar överallt. Nackdelen är att man kan få en väldigt ihoptryckt layout på smala displayer och väldigt långa textrader på breda displayer.
 
 ###Media Queries
-En teknik som ger stšrre mšjlighet till anpassning fšr olika bredder Šr CSS-modulen [Media Queries](http://www.w3.org/TR/css3-mediaqueries/ ), som stšds av de webblŠsare som anvŠnds i de flesta moderna smartphones. Med hjŠlp av Media Queries kan man byta layout drastiskt vid olika fšnsterbredder, vilket gšr att man till exempel kan byta frŒn en enspaltslayout pŒ en iPhone i stŒende lŠge till en trespaltslayout pŒ en iPad i liggande lŠge.
+En teknik som ger större möjlighet till anpassning för olika bredder är CSS-modulen [Media Queries](http://www.w3.org/TR/css3-mediaqueries/ ), som stöds av de webbläsare som används i de flesta moderna smartphones. Med hjälp av Media Queries kan man byta layout drastiskt vid olika fönsterbredder, vilket gör att man till exempel kan byta från en enspaltslayout på en iPhone i stående läge till en trespaltslayout på en iPad i liggande läge.
 
-Man kan ocksŒ kombinera media queries med flexibel bredd fšr att optimera layouten fšr bredder som ligger mellan de fasta steg man anpassar fšr (vilket Šr vanligt med desktopwebblŠsare).
+Man kan också kombinera media queries med flexibel bredd för att optimera layouten för bredder som ligger mellan de fasta steg man anpassar för (vilket är vanligt med desktopwebbläsare).
 
-LŠmpliga bredder att kontrollera sin layout vid nŠr man anvŠnder Media Queries Šr fšljande:
+Lämpliga bredder att kontrollera sin layout vid när man använder Media Queries är följande:
 
-  * 320px (iPhone, iPod Touch i stŒende lŠge)
-  * 480px (iPhone, iPod Touch i liggande lŠge)
-  * 768px (iPad i stŒende lŠge)
-  * 1024px (iPad i liggande lŠge)
+  * 320px (iPhone, iPod Touch i stående läge)
+  * 480px (iPhone, iPod Touch i liggande läge)
+  * 768px (iPad i stående läge)
+  * 1024px (iPad i liggande läge)
 
-Utšver det Šr det lŠmpligt att bygga layouten sŒ att den fungerar bra Šven vid andra mŒtt, men dessa Šr fasta mŒtt som beršr de aktuella mŒlplattformarna.
+Utöver det är det lämpligt att bygga layouten så att den fungerar bra även vid andra mått, men dessa är fasta mått som berör de aktuella målplattformarna.
 
-##PekskŠrmar
+##Pekskärmar
 
-###Stšrre trŠffytor
-NŠr man anvŠnder enheter med pekskŠrm har man inte samma finkontroll av var man "klickar" eftersom det inte finns nŒgon muspekare och en fingertopp ger en betydligt stšrre trŠffyta Šn en muspekare. DŠrfšr Šr det bra att gšra klick/trŠffytor stšrre sŒ de blir enklare att trŠffa och inte lŠgga dem fšr nŠra varandra fšr att minska risken att man trycker pŒ fel yta.
+###Större träffytor
+När man använder enheter med pekskärm har man inte samma finkontroll av var man "klickar" eftersom det inte finns någon muspekare och en fingertopp ger en betydligt större träffyta än en muspekare. Därför är det bra att göra klick/träffytor större så de blir enklare att träffa och inte lägga dem för nära varandra för att minska risken att man trycker på fel yta.
 
 ###Undvik hover/mouseover
-Även om det finns visst stšd fšr att hantera CSS och !JavaScript som pŒ en desktopdator aktiveras nŠr man fšr muspekaren šver ett element Šr det bra att fšrsška undvika den typen av interaktion, eller Œtminstone inte gšra sig beroende av att den fungerar. Det gŠller sŠrskilt "mystery meat"-interaktion, det vill sŠga innehŒll som inte avslšjas fšrrŠn man fšr muspekaren šver ett element.
+Även om det finns visst stöd för att hantera CSS och !JavaScript som på en desktopdator aktiveras när man för muspekaren över ett element är det bra att försöka undvika den typen av interaktion, eller åtminstone inte göra sig beroende av att den fungerar. Det gäller särskilt "mystery meat"-interaktion, det vill säga innehåll som inte avslöjas förrän man för muspekaren över ett element.
 
 ##Bandbredd
-Om anvŠndarna fšrvŠntas anvŠnda en lšsning huvudsakligen via mobilanslutning, alltsŒ inte via Wi-fi, fŒr man tŠnka pŒ att uppkopplingen kan vara betydligt lŒngsammare. DŠrfšr Šr det extra viktigt att hŒlla nere filstorlekar och antalet HTTP-anrop fšr att snabba upp lšsningen.
+Om användarna förväntas använda en lösning huvudsakligen via mobilanslutning, alltså inte via Wi-fi, får man tänka på att uppkopplingen kan vara betydligt långsammare. Därför är det extra viktigt att hålla nere filstorlekar och antalet HTTP-anrop för att snabba upp lösningen.
 
 ##Teknologier
-WebblŠsarna i moderna smartphones har vŠl utbyggt stšd fšr nya webbtekniker som [HTML5](http://www.w3.org/TR/html5/ ) och CSS 3. DŠrfšr kan man anvŠnda dem fšr att tillfšra funktionalitet och design pŒ ett mer effektivt sŠtt. En fšrutsŠttning Šr att man anvŠnder HTML5 och CSS 3 pŒ ett sŠtt som gšr att grundfunktionaliteten ŠndŒ finns i webblŠsare som inte har stšd fšr dem.
+Webbläsarna i moderna smartphones har väl utbyggt stöd för nya webbtekniker som [HTML5](http://www.w3.org/TR/html5/ ) och CSS 3. Därför kan man använda dem för att tillföra funktionalitet och design på ett mer effektivt sätt. En förutsättning är att man använder HTML5 och CSS 3 på ett sätt som gör att grundfunktionaliteten ändå finns i webbläsare som inte har stöd för dem.
 
 ###HTML5
-Även om specifikationen fšr HTML5 inte Šr helt klar Šnnu – den har inte uppnŒtt W3C-statusen "Recommendation" – Šr den sŒpass mogen att det allra mesta som Šr implementerat av webblŠsare kan anvŠndas sŒ lŠnge man tar hšjd fšr vad som hŠnder nŠr stšd saknas.
+Även om specifikationen för HTML5 inte är helt klar ännu – den har inte uppnått W3C-statusen "Recommendation" – är den såpass mogen att det allra mesta som är implementerat av webbläsare kan användas så länge man tar höjd för vad som händer när stöd saknas.
 
 ###CSS 3
-CSS 3 Šr inte en homogen specifikation utan bestŒr av ett antal olika moduler som Šr olika mogna och olika vŠl implementerade. Exempel pŒ moduler som redan nu har brett webblŠsarstšd, sŠrskilt nŠr det gŠller moderna smartphones, Šr:
+CSS 3 är inte en homogen specifikation utan består av ett antal olika moduler som är olika mogna och olika väl implementerade. Exempel på moduler som redan nu har brett webbläsarstöd, särskilt när det gäller moderna smartphones, är:
 
   * [Selectors Level 3](http://www.w3.org/TR/css3-selectors/ )
   * [CSS Color Module Level 3](http://www.w3.org/TR/css3-color/ )
@@ -65,17 +65,17 @@ CSS 3 Šr inte en homogen specifikation utan bestŒr av ett antal olika moduler so
   * [CSS Text Level 3](http://www.w3.org/TR/css3-text/ )
 
 ##Övrigt
-CSS-egenskapen `position:fixed` stšds inte pŒ samma sŠtt i iOS 4 och Šldre som i desktopwebblŠsare. Att implementera samma funktion dŠr krŠver JavaScript och Šr i dagslŠget inte helt tillfšrlitligt. Om man anvŠnder en design som krŠver fasta element bšr man dŠrfšr vara extra noga med att testa implementationen. Stšd fšr `position:fixed` finns i iOS 5.
+CSS-egenskapen `position:fixed` stöds inte på samma sätt i iOS 4 och äldre som i desktopwebbläsare. Att implementera samma funktion där kräver JavaScript och är i dagsläget inte helt tillförlitligt. Om man använder en design som kräver fasta element bör man därför vara extra noga med att testa implementationen. Stöd för `position:fixed` finns i iOS 5.
 
-##Aktuella webblŠsare
-I nulŠget Šr den huvudsakliga mobila mŒlgruppen sŒdana som Šr baserade pŒ 
-[WebKit](http://en.wikipedia.org/wiki/WebKit ). Dit hšr iPhone, iPad, iPod, Android med flera. Detta Šr den grupp av mobila webblŠsare som kvalitetssŠkring sker mot i fšrsta hand. Andra webblŠsare som Opera Mini och Opera Mobile kan vara aktuella beroende pŒ mŒlgrupp.
+##Aktuella webbläsare
+I nuläget är den huvudsakliga mobila målgruppen sådana som är baserade på 
+[WebKit](http://en.wikipedia.org/wiki/WebKit ). Dit hör iPhone, iPad, iPod, Android med flera. Detta är den grupp av mobila webbläsare som kvalitetssäkring sker mot i första hand. Andra webbläsare som Opera Mini och Opera Mobile kan vara aktuella beroende på målgrupp.
 
-##Testmiljšer
+##Testmiljöer
 
-Under utveckling Šr det som ger sŠkrast resultat att testa i en riktig miljš, alltsŒ pŒ en mobil enhet. Om man inte har tillgŒng till sŒdana finns mjukvarulšsningar fšr bŒde iOS och Android.
+Under utveckling är det som ger säkrast resultat att testa i en riktig miljö, alltså på en mobil enhet. Om man inte har tillgång till sådana finns mjukvarulösningar för både iOS och Android.
 
-  * [Xcode 4 fšr Mac OS X och iOS](http://developer.apple.com/xcode/index.php )
+  * [Xcode 4 för Mac OS X och iOS](http://developer.apple.com/xcode/index.php )
   * [Android Emulator](http://developer.android.com/guide/developing/tools/emulator.html )
 
 ##Referenser

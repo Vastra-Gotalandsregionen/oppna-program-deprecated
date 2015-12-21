@@ -2,16 +2,16 @@
 
 
 
-#DEPRECATED: Checklista fšr kvalitetskontroll av grŠnssnittskod
+#DEPRECATED: Checklista för kvalitetskontroll av gränssnittskod
 
-AnvŠnd denna lista som ett stšd vid granskning av grŠnssnittskod. I de fall en kontrollpunkt inte Šr godkŠnd ska en kommentar som fšrklarar varfšr finnas. Observera att det finns betydligt fler kvalitetsaspekter Šn det som finns med i denna _enkla_ checklista.
+Använd denna lista som ett stöd vid granskning av gränssnittskod. I de fall en kontrollpunkt inte är godkänd ska en kommentar som förklarar varför finnas. Observera att det finns betydligt fler kvalitetsaspekter än det som finns med i denna _enkla_ checklista.
 
-Utfšrligare beskrivning av varje kontrollpunkt finns i tillhšrande riktlinjedokument.
+Utförligare beskrivning av varje kontrollpunkt finns i tillhörande riktlinjedokument.
 
 <table width="100%">
 	<thead>
 		<tr align#"left" valign"top">
-			<th colspan="3">[UppmŠrkningskod (HTML/XHTML)](https://github.com/Vastra-Gotalandsregionen/oppna-program/wiki/Granssnitt_Riktlinjer_for_HTML )</th>
+			<th colspan="3">[Uppmärkningskod (HTML/XHTML)](https://github.com/Vastra-Gotalandsregionen/oppna-program/wiki/Granssnitt_Riktlinjer_for_HTML )</th>
 		</tr>
 	</thead>
 	<tbody valign="top">
@@ -71,7 +71,7 @@ Utfšrligare beskrivning av varje kontrollpunkt finns i tillhšrande riktlinjedoku
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Funktionstest i webblŠsare</td>
+			<td>Funktionstest i webbläsare</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
@@ -86,7 +86,7 @@ Utfšrligare beskrivning av varje kontrollpunkt finns i tillhšrande riktlinjedoku
 <table width="100%">
 	<thead>
 		<tr align#"left" valign"top">
-			<th colspan="3">[Nyhetsflšden (RSS/XML)](https://github.com/Vastra-Gotalandsregionen/oppna-program/wiki/Granssnitt_Riktlinjer_for_validering_av_nyhetsfloden )</th>
+			<th colspan="3">[Nyhetsflöden (RSS/XML)](https://github.com/Vastra-Gotalandsregionen/oppna-program/wiki/Granssnitt_Riktlinjer_for_validering_av_nyhetsfloden )</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -116,7 +116,7 @@ Utfšrligare beskrivning av varje kontrollpunkt finns i tillhšrande riktlinjedoku
 			<th>Kommentar</th>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Validering av anvŠnda metadataelement</td>
+			<td>Validering av använda metadataelement</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
@@ -126,7 +126,7 @@ Utfšrligare beskrivning av varje kontrollpunkt finns i tillhšrande riktlinjedoku
 <table width="100%">
 	<thead>
 		<tr align#"left" valign"top">
-			<th colspan="3">[Teknisk tillgŠnglighet](https://github.com/Vastra-Gotalandsregionen/oppna-program/wiki/Granssnitt_Utvardering_av_teknisk_tillganglighet )</th>
+			<th colspan="3">[Teknisk tillgänglighet](https://github.com/Vastra-Gotalandsregionen/oppna-program/wiki/Granssnitt_Utvardering_av_teknisk_tillganglighet )</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -136,72 +136,72 @@ Utfšrligare beskrivning av varje kontrollpunkt finns i tillhšrande riktlinjedoku
 			<th>Kommentar</th>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Inga ramar anvŠnds</td>
+			<td>Inga ramar används</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Alternativtext anvŠnds på rŠtt sŠtt</td>
+			<td>Alternativtext används på rätt sätt</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Titletext anvŠnds på rŠtt sŠtt</td>
+			<td>Titletext används på rätt sätt</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Webbplatsen eller webbapplikationen Šr inte beroende av !JavaScript</td>
+			<td>Webbplatsen eller webbapplikationen är inte beroende av !JavaScript</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Tabeller anvŠnds inte fšr layout</td>
+			<td>Tabeller används inte för layout</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Text går att fšrstora i alla webblŠsare</td>
+			<td>Text går att förstora i alla webbläsare</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Text går att fšrstora till 200% utan att innehåll fšrsvinner eller blir olŠsligt</td>
+			<td>Text går att förstora till 200% utan att innehåll försvinner eller blir oläsligt</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Rubriker anvŠnds och anvŠnds på rŠtt sŠtt</td>
+			<td>Rubriker används och används på rätt sätt</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Lšsningen går att anvŠnda Šven utan CSS</td>
+			<td>Lösningen går att använda även utan CSS</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Kontrasten mellan text och bakgrund Šr tillrŠcklig enligt WCAG 2.0 Level AA</td>
+			<td>Kontrasten mellan text och bakgrund är tillräcklig enligt WCAG 2.0 Level AA</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Lšsningen går att anvŠnda utan mus</td>
+			<td>Lösningen går att använda utan mus</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Tabeller anvŠnds fšr att strukturera tabulŠr data på korrekt sŠtt</td>
+			<td>Tabeller används för att strukturera tabulär data på korrekt sätt</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>FormulŠr Šr korrekt uppbyggda</td>
+			<td>Formulär är korrekt uppbyggda</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
 		<tr align#"left" valign"top">
-			<td>Inga insticksprogram krŠvs</td>
+			<td>Inga insticksprogram krävs</td>
 			<td> [   ]  (   ) </td>
 			<td></td>
 		</tr>
