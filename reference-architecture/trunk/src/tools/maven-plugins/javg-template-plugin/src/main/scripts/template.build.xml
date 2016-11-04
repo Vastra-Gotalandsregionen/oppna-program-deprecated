@@ -66,7 +66,13 @@
 
         <delete file="${template.dir}/__svn_repo/trunk/pom-${hosting.location.internal}.xml"/>
 
-    	<move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/applications/__REPLACE_BC_NAME__"
+    	<move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/composites/webcomp/src/main/java/se/vgregion/__REPLACE_SYSTEM_NAME__"
+                tofile="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/composites/webcomp/src/main/java/se/vgregion/${system.name}"/>
+
+    	<move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/modules/web/src/main/java/se/vgregion/__REPLACE_SYSTEM_NAME__"
+                tofile="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/modules/web/src/main/java/se/vgregion/${system.name}"/>
+
+        <move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/applications/__REPLACE_BC_NAME__"
                 tofile="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__/applications/${business.component.name}"/>
 
         <move file="${template.dir}/__svn_repo/trunk/__REPLACE_BC_NAME__"
@@ -98,7 +104,7 @@
     </target>
 
 
-    <target name="public_create_subversion_structure"
+    <target name="public_create_git_structure"
             depends="private_unzip_template_artifact,
                      private_initialize_structure">
         <move file="${template.dir}"

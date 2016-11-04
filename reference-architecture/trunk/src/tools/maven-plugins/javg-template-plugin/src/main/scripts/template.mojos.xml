@@ -8,8 +8,8 @@
     </mojo>
 
     <mojo>
-      <goal>svn</goal>
-      <call>public_create_subversion_structure</call>
+      <goal>git</goal>
+      <call>public_create_git_structure</call>
     </mojo>
   </mojos>
 </pluginMetadata>
