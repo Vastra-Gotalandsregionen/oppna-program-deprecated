@@ -21,7 +21,7 @@ Generation time : __GENERATION_TIME__
     <name>${project.artifactId}</name>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>__REPLACE_SYSTEM_NAME__</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>

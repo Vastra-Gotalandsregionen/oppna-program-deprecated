@@ -4,12 +4,14 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
+
 /**
  * @author Patrik Björk
  */
 @Component(value = "myController")
 @Scope(value = "view", proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class MyController {
+public class MyController implements Serializable {
 
     private String name;
 
