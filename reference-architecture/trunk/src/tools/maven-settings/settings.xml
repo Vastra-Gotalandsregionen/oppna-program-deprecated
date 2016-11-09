@@ -42,20 +42,19 @@ Maven2 settings. To be placed in $USER_HOME/.m2
     <profile>
       <id>vgr-internal</id>
       <properties>
-        <liferay.version>6.0.11</liferay.version>
       </properties>
       <repositories>
         <repository>
          <id>central</id>
          <name>vgr internal repo</name>
-         <url>http://portalutv.vgregion.se/nexus/content/groups/all_repos</url>
+         <url>http://nexus.vgregion.se:8081/nexus/content/groups/all_repos</url>
         </repository>
       </repositories>
       <pluginRepositories>
         <pluginRepository>
           <id>central</id>
           <name>vgr internal repo</name>
-          <url>http://portalutv.vgregion.se/nexus/content/groups/all_repos</url>
+          <url>http://nexus.vgregion.se:8081/nexus/content/groups/all_repos</url>
         </pluginRepository>
       </pluginRepositories>
     </profile>

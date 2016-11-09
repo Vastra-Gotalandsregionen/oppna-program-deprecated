@@ -1,4 +1,4 @@
-package se.vgregion.systemname.jsf;
+package se.vgregion.__REPLACE_SYSTEM_NAME__.jsf;
 
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.Scope;

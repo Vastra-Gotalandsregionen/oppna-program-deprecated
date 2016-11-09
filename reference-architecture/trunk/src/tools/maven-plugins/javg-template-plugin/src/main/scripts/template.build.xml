@@ -82,6 +82,19 @@
     	<move file="${template.dir}/__git_repo"
                 tofile="${template.dir}/${system.name}"/>
 
+        <taskdef resource="net/sf/antcontrib/antlib.xml"
+                 classpathref="maven.dependency.classpath" />
+
+        <propertyregex property="systemNameWithoutHyphen"
+                       input="${system.name}"
+                       regexp="-"
+                       replace="_"
+                       global="true" />
+
+        <replace dir="${template.dir}" includes="**/src/**">
+            <replacefilter token="__REPLACE_SYSTEM_NAME__" value="${systemNameWithoutHyphen}"/>
+        </replace>
+
     	<!-- replace values in Maven POM-files -->
         <replace dir="${template.dir}" includes="**/*">
             <replacefilter token="__REPLACE_GROUPID__" value="${base.package.name}.${system.name}"/>
@@ -91,8 +104,8 @@
             <replacefilter token="__TEMPLATE_VERSION__" value="${template.version}"/>
         	<replacefilter token="__PROJECT_HOSTING__" value="${hosting.location}"/>        	
         </replace>
-    </target>
 
+    </target>
 
     <target name="public_create_business_component_structure"
             depends="private_unzip_template_artifact,

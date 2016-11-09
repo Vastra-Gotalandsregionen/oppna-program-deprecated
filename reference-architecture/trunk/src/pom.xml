@@ -35,50 +35,6 @@
     </license>
   </licenses>
 
-  <developers>
-    <developer>
-      <id>hangy2</id>
-      <name>Hans Gyllensten</name>
-      <organization>Västra Götalandsregionen</organization>
-      <organizationUrl>http://www.vgregion.se</organizationUrl>
-      <roles>
-        <role>architect</role>
-      </roles>
-      <timezone>+1</timezone>
-    </developer>
-    <developer>
-      <id>aasplund</id>
-      <name>Anders Asplund</name>
-      <organization>Logica</organization>
-      <organizationUrl>http://www.logica.com</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>+1</timezone>
-    </developer>
-    <developer>
-      <id>jonas.liljenfeldt</id>
-      <name>Jonas Liljenfeldt</name>
-      <organization>Know IT</organization>
-      <organizationUrl>http://www.knowit.se</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>+1</timezone>
-    </developer>
-    <developer>
-      <id>argoyle</id>
-      <name>Joakim Olsson</name>
-      <organization>Unbound</organization>
-      <organizationUrl>http://www.unbound.se</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-      <timezone>+1</timezone>
-    </developer>
-  </developers>
-  
-
   <modules>
     <module>poc</module>
     <module>ref-systems</module>
@@ -86,19 +42,9 @@
     <module>tools</module>
   </modules>
   
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.jvnet.wagon-svn</groupId>
-        <artifactId>wagon-svn</artifactId>
-        <version>1.8</version>
-      </extension>
-    </extensions>
-  </build>
-
   <scm>
-    <developerConnection>scm:svn:https://oppna-program.googlecode.com/svn/reference-architecture/trunk</developerConnection>
-    <url>http://oppna-program.googlecode.com/</url>
+    <developerConnection>scm:git:https://github.com/Vastra-Gotalandsregionen/oppna-program.git</developerConnection>
+    <url>https://github.com/Vastra-Gotalandsregionen/oppna-program</url>
   </scm>
 
   <distributionManagement>
