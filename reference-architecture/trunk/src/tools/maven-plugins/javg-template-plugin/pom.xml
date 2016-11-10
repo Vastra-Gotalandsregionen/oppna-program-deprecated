@@ -20,11 +20,11 @@
     <parent>
         <groupId>se.vgregion.javg.maven.plugins</groupId>
         <artifactId>maven-plugins</artifactId>
-        <version>1.6</version>
+        <version>1.7-SNAPSHOT</version>
     </parent>
     <artifactId>javg-template-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.6</version>
+    <version>1.7-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <description>
         Plugin that creates template file-structures for the reference architecture.
