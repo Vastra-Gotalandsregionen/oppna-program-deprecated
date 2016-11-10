@@ -20,7 +20,7 @@
   <parent>
     <groupId>se.vgregion.javg.maven.archetypes</groupId>
     <artifactId>maven-archetypes</artifactId>
-    <version>1.7</version>
+    <version>1.8-SNAPSHOT</version>
   </parent>
   <groupId>se.vgregion.javg.maven.archetypes</groupId>
   <artifactId>javg-minimal-archetype</artifactId>
