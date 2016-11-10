@@ -89,7 +89,8 @@
                        input="${system.name}"
                        regexp="-"
                        replace="_"
-                       global="true" />
+                       global="true"
+                       defaultValue="${system.name}" />
 
         <replace dir="${template.dir}" includes="**/src/**">
             <replacefilter token="__REPLACE_SYSTEM_NAME__" value="${systemNameWithoutHyphen}"/>
