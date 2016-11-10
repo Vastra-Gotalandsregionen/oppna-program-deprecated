@@ -35,6 +35,58 @@
     </license>
   </licenses>
 
+  <developers>
+    <developer>
+      <id>hangy2</id>
+      <name>Hans Gyllensten</name>
+      <organization>Västra Götalandsregionen</organization>
+      <organizationUrl>http://www.vgregion.se</organizationUrl>
+      <roles>
+        <role>architect</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id>aasplund</id>
+      <name>Anders Asplund</name>
+      <organization>Logica</organization>
+      <organizationUrl>http://www.logica.com</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id>jonas.liljenfeldt</id>
+      <name>Jonas Liljenfeldt</name>
+      <organization>Know IT</organization>
+      <organizationUrl>http://www.knowit.se</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id>argoyle</id>
+      <name>Joakim Olsson</name>
+      <organization>Unbound</organization>
+      <organizationUrl>http://www.unbound.se</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id>patbe5</id>
+      <name>Patrik Björk</name>
+      <organization>Codespirit</organization>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
   <modules>
     <module>tools</module>
   </modules>
