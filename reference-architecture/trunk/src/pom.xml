@@ -36,9 +36,6 @@
   </licenses>
 
   <modules>
-    <module>poc</module>
-    <module>ref-systems</module>
-    <module>runtime</module>
     <module>tools</module>
   </modules>
   

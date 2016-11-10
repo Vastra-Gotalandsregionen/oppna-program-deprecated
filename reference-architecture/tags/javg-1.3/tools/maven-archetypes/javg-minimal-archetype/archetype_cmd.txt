@@ -1,1 +1,0 @@
-mvn archetype:generate -Darchetype.interactive=false -DarchetypeGroupId=se.vgr.javg.maven.archetypes -DarchetypeArtifactId=javg-minimal-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=whatever -DartifactId=something -Dversion=1.0-SNAPSHOT -Dpackage=NONE
