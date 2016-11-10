@@ -21,7 +21,7 @@
   <groupId>se.vgregion.javg</groupId>
   <artifactId>javg</artifactId>
   <packaging>pom</packaging>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.6</version>
   <name>${project.artifactId}</name>
   <description>Maven plugin for creating projects in the oppna-program community</description>
   <url>http://oppna-program.googlecode.com</url>
@@ -94,6 +94,7 @@
   <scm>
     <developerConnection>scm:git:https://github.com/Vastra-Gotalandsregionen/oppna-program.git</developerConnection>
     <url>https://github.com/Vastra-Gotalandsregionen/oppna-program</url>
+    <tag>javg-1.6</tag>
   </scm>
 
   <distributionManagement>

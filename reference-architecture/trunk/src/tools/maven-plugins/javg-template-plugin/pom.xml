@@ -15,17 +15,16 @@
   Free Software Foundation, Inc., 59 Temple Place, Suite 330,
   Boston, MA 02111-1307  USA
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>se.vgregion.javg.maven.plugins</groupId>
         <artifactId>maven-plugins</artifactId>
-        <version>1.6-SNAPSHOT</version>
+        <version>1.6</version>
     </parent>
     <artifactId>javg-template-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.6-SNAPSHOT</version>
+    <version>1.6</version>
     <name>${project.artifactId}</name>
     <description>
         Plugin that creates template file-structures for the reference architecture.
@@ -52,7 +51,7 @@
                         <configuration>
                             <tasks>
                                 <copy todir="${project.build.outputDirectory}/template">
-                                    <fileset dir="${basedir}/src/main/template"/>
+                                    <fileset dir="${basedir}/src/main/template" />
                                 </copy>
                             </tasks>
                         </configuration>
