@@ -67,21 +67,6 @@
 
         <delete file="${template.dir}/__git_repo/pom-${hosting.location.internal}.xml"/>
 
-    	<move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__/composites/webcomp/src/main/java/se/vgregion/__REPLACE_SYSTEM_NAME__"
-                tofile="${template.dir}/__git_repo/__REPLACE_BC_NAME__/composites/webcomp/src/main/java/se/vgregion/${system.name}"/>
-
-    	<move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__/modules/web/src/main/java/se/vgregion/__REPLACE_SYSTEM_NAME__"
-                tofile="${template.dir}/__git_repo/__REPLACE_BC_NAME__/modules/web/src/main/java/se/vgregion/${system.name}"/>
-
-        <move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__/applications/__REPLACE_BC_NAME__"
-                tofile="${template.dir}/__git_repo/__REPLACE_BC_NAME__/applications/${business.component.name}"/>
-
-        <move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__"
-                tofile="${template.dir}/__git_repo/${business.component.name}"/>
-
-    	<move file="${template.dir}/__git_repo"
-                tofile="${template.dir}/${system.name}"/>
-
         <taskdef resource="net/sf/antcontrib/antlib.xml"
                  classpathref="maven.dependency.classpath" />
 
@@ -91,6 +76,21 @@
                        replace="_"
                        global="true"
                        defaultValue="${system.name}" />
+
+        <move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__/composites/webcomp/src/main/java/se/vgregion/__REPLACE_SYSTEM_NAME__"
+                tofile="${template.dir}/__git_repo/__REPLACE_BC_NAME__/composites/webcomp/src/main/java/se/vgregion/${systemNameWithoutHyphen}"/>
+
+    	<move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__/modules/web/src/main/java/se/vgregion/__REPLACE_SYSTEM_NAME__"
+                tofile="${template.dir}/__git_repo/__REPLACE_BC_NAME__/modules/web/src/main/java/se/vgregion/${systemNameWithoutHyphen}"/>
+
+        <move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__/applications/__REPLACE_BC_NAME__"
+                tofile="${template.dir}/__git_repo/__REPLACE_BC_NAME__/applications/${business.component.name}"/>
+
+        <move file="${template.dir}/__git_repo/__REPLACE_BC_NAME__"
+                tofile="${template.dir}/__git_repo/${business.component.name}"/>
+
+    	<move file="${template.dir}/__git_repo"
+                tofile="${template.dir}/${system.name}"/>
 
         <replace dir="${template.dir}" includes="**/src/**">
             <replacefilter token="__REPLACE_SYSTEM_NAME__" value="${systemNameWithoutHyphen}"/>

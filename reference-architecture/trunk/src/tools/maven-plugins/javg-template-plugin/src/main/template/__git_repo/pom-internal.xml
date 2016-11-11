@@ -26,7 +26,7 @@
     <!--NB! SCM config below assumes system name equals VGR subversion/googlecode project name! -->
     <!-- Open Source repo -->
     <scm>
-        <developerConnection>scm:git:git://git.vgregion.se/portal-teamet/__REPLACE_SYSTEM_NAME__.git/</developerConnection>
+        <developerConnection>scm:git:git@git.vgregion.se:portal-teamet/__REPLACE_SYSTEM_NAME__.git</developerConnection>
         <url>https://git.vgregion.se/portal-teamet/__REPLACE_SYSTEM_NAME__</url>
     </scm>
 
