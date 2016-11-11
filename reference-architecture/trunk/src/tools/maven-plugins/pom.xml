@@ -21,12 +21,12 @@
   <parent>
     <groupId>se.vgregion.javg.tools</groupId>
     <artifactId>tools</artifactId>
-    <version>1.8</version>
+    <version>1.9-SNAPSHOT</version>
   </parent>
   <groupId>se.vgregion.javg.maven.plugins</groupId>
   <artifactId>maven-plugins</artifactId>
   <packaging>pom</packaging>
-  <version>1.8</version>
+  <version>1.9-SNAPSHOT</version>
   <name>${project.artifactId}</name>
 
   <!-- common library versions -->
