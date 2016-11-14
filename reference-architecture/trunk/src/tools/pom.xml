@@ -21,12 +21,12 @@
   <parent>
     <groupId>se.vgregion.javg</groupId>
     <artifactId>javg</artifactId>
-    <version>1.9-SNAPSHOT</version>
+    <version>1.9</version>
   </parent>
   <groupId>se.vgregion.javg.tools</groupId>
   <artifactId>tools</artifactId>
   <packaging>pom</packaging>
-  <version>1.9-SNAPSHOT</version>
+  <version>1.9</version>
   <name>${project.artifactId}</name>
 
   <modules>
