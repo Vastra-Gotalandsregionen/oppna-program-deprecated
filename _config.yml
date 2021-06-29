@@ -2,7 +2,7 @@ title: Oppna-Program
 description: Open source development for public health care in Vastra Gotalandsregionen, Sweden
 google_analytics: 
 show_downloads: true
-theme: minima
+theme: jekyll-theme-minimal
 
 gems:
   - jekyll-mentions
